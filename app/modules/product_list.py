@@ -4,6 +4,7 @@ import os
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from database import Database
+from core.constants import MANY_THRESHOLD
 from modules.dialog_manager import DialogManager
 import config
 from flet.core.dropdownm2 import Option as DropdownOption
@@ -337,12 +338,12 @@ class ProductListPage:
                                     ),
                                     ft.Text(
                                         "Много"
-                                        if product.stock > 5
+                                        if product.stock > MANY_THRESHOLD
                                         else "Мало",
                                         size=14,
                                         weight=ft.FontWeight.BOLD,
                                         color=ft.Colors.GREEN
-                                        if product.stock > 5
+                                        if product.stock > MANY_THRESHOLD
                                         else ft.Colors.ORANGE,
                                     ),
                                 ],
