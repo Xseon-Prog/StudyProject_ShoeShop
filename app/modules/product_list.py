@@ -162,7 +162,7 @@ class ProductListPage:
         except Exception as ex:
             DialogManager.show_error_dialog(
                 self.page,
-                "Ошибка загрузки товаров",
+                "Не удалось загрузить каталог",
                 f"Не удалось загрузить товары из базы данных: {str(ex)}",
             )
 
