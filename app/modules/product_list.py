@@ -336,13 +336,13 @@ class ProductListPage:
                                         else ft.Colors.BLUE,
                                     ),
                                     ft.Text(
-                                        "Много"
-                                        if product.stock > 5
-                                        else "Мало",
+                                        "Много в наличии"
+                                        if product.stock >= 6
+                                        else "Мало в наличии",
                                         size=14,
                                         weight=ft.FontWeight.BOLD,
                                         color=ft.Colors.GREEN
-                                        if product.stock > 5
+                                        if product.stock >= 6
                                         else ft.Colors.ORANGE,
                                     ),
                                 ],
