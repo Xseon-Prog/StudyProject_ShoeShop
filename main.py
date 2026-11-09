@@ -11,7 +11,7 @@ def main(page: ft.Page):
     from database import User
     import config
 
-    page.title = "ООО «Обувь» - Магазин обуви"
+    page.title = "ООО «Обувь» - Каталог товаров"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.padding = 0
     page.scroll = ft.ScrollMode.ADAPTIVE
