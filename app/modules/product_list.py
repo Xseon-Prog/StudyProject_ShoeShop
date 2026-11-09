@@ -337,9 +337,9 @@ class ProductListPage:
                                         else ft.Colors.BLUE,
                                     ),
                                     ft.Text(
-                                        "Много"
+                                        "Много в наличии"
                                         if product.stock > MANY_THRESHOLD
-                                        else "Мало",
+                                        else "Мало в наличии",
                                         size=14,
                                         weight=ft.FontWeight.BOLD,
                                         color=ft.Colors.GREEN
