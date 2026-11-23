@@ -107,7 +107,10 @@ class Database:
             )
             return True
         except Exception as e:
-            print(f"Ошибка подключения к БД: {e}")
+            print(
+                f"Ошибка подключения к БД: {e}. "
+                "Проверьте файл config.ini и параметры подключения."
+            )
             return False
 
     def execute_query(self, query: str, params: tuple[Any, ...] | None = None) -> QueryResult:
