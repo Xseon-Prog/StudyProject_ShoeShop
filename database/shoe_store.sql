@@ -2,7 +2,6 @@
 -- PostgreSQL database dump
 --
 
-\restrict Wp35EEjhSAVAyBuFjZCfraRj29bfi4Q3gjeHqdGbMwekyNpH7vPK1DAcGSsJTDe
 
 -- Dumped from database version 18.0
 -- Dumped by pg_dump version 18.1 (Homebrew)
@@ -426,5 +425,4 @@ ALTER TABLE ONLY public.orders
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Wp35EEjhSAVAyBuFjZCfraRj29bfi4Q3gjeHqdGbMwekyNpH7vPK1DAcGSsJTDe
 
