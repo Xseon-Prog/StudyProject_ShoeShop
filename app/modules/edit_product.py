@@ -76,9 +76,7 @@ class EditProductPage:
 
         self.photo_path = self.product.photo or None
         self.photo_image = ft.Image(
-            src=os.path.join(config.TOVAR_IMAGES_DIR, self.photo_path)
-            if self.photo_path
-            else config.PLACEHOLDER_IMAGE,
+            src=config.asset_product_image(self.photo_path),
             width=150,
             height=150,
             fit=ft.ImageFit.CONTAIN,
@@ -241,7 +239,7 @@ class EditProductPage:
                         icon_color=ft.Colors.BLACK,
                     ),
                     ft.Image(
-                        src=config.LOGO_IMAGE,
+                        src=config.ASSET_LOGO_IMAGE,
                         width=40,
                         height=40,
                         fit=ft.ImageFit.CONTAIN,
@@ -308,7 +306,7 @@ class EditProductPage:
 
                 image.save(destination_path, quality=85)
                 self.photo_path = filename
-                self.photo_image.src = destination_path
+                self.photo_image.src = config.asset_product_image(filename)
             except Exception as ex:
                 DialogManager.show_error_dialog(
                     self.page,

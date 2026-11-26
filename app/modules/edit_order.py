@@ -155,7 +155,7 @@ class EditOrderPage:
                         icon_color=ft.Colors.BLACK,
                     ),
                     ft.Image(
-                        src=config.LOGO_IMAGE,
+                        src=config.ASSET_LOGO_IMAGE,
                         width=40,
                         height=40,
                         fit=ft.ImageFit.CONTAIN,

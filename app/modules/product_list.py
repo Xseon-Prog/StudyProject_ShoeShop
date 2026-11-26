@@ -55,7 +55,7 @@ class ProductListPage:
                         icon_color=ft.Colors.BLACK,
                     ),
                     ft.Image(
-                        src=config.LOGO_IMAGE,
+                        src=config.ASSET_LOGO_IMAGE,
                         width=40,
                         height=40,
                         fit=ft.ImageFit.CONTAIN,
@@ -409,10 +409,7 @@ class ProductListPage:
             )
 
     def create_image_widget(self, product):
-        if product.photo:
-            image_src = os.path.join(config.TOVAR_IMAGES_DIR, product.photo)
-        else:
-            image_src = config.PLACEHOLDER_IMAGE
+        image_src = config.asset_product_image(product.photo)
         return ft.Container(
             content=ft.Image(
                 src=image_src,

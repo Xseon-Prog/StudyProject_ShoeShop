@@ -34,7 +34,7 @@ class NewProductPage:
 
         # Photo container
         self.photo_image = ft.Image(
-            src=config.PLACEHOLDER_IMAGE,
+            src=config.ASSET_PLACEHOLDER_IMAGE,
             width=150,
             height=150,
             fit=ft.ImageFit.CONTAIN,
@@ -198,7 +198,7 @@ class NewProductPage:
                         icon_color=ft.Colors.BLACK,
                     ),
                     ft.Image(
-                        src=config.LOGO_IMAGE,
+                        src=config.ASSET_LOGO_IMAGE,
                         width=40,
                         height=40,
                         fit=ft.ImageFit.CONTAIN,
@@ -264,7 +264,7 @@ class NewProductPage:
 
             image.save(destination_path, quality=85)
             self.photo_path = filename
-            self.photo_image.src = destination_path
+            self.photo_image.src = config.asset_product_image(filename)
             print(f"Photo processed and saved at: {destination_path}")
 
         else:
